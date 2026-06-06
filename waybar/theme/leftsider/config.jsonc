@@ -35,7 +35,7 @@
       "format": "{icon}",
       "format-muted": "",
       "format-icons": {
-          "default": ["", "", " "]
+          "default": ["", "", ""]
       },
       "on-click": "~/.config/rofi/Audio/audio.sh"
   },
