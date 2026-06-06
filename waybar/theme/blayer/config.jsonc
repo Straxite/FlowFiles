@@ -8,7 +8,7 @@
   "margin-right": 0,
   "margin-left": 0,
   "margin-top": 0,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces", "custom/active_window"],
+  "modules-left": ["custom/omarchy", "hyprland/workspaces", "wlr/taskbar"],
   "modules-center": [ "custom/separator#blank" ],
   "modules-right": [
     "tray",
