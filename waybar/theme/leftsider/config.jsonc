@@ -63,7 +63,7 @@
   },
   "custom/launcher": {
     "format": "󰣇",
-    "on-click": "~/.config/rofi/launchers/type-3/launcher.sh",
+    "on-click": "~/.config/rofi/launchers/launcher.sh",
   },
   "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
