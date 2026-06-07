@@ -29,3 +29,6 @@ Theme Layout Switcher = SUPER + SPACE
 Files = SUPER + E 
 Power Menu = SUPER + M
 
+
+<img width="1920" height="1080" alt="2026-06-07-134021_hyprshot" src="https://github.com/user-attachments/assets/9c183245-d214-4339-8bbd-4ee9bcc76bb7" />
+
