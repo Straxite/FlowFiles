@@ -1,16 +1,16 @@
 # FlowFiles
-This is my hyprland dotfile repo. If any one wants a minimal hyprland config this is very simple and easy to use..(Still in development tho)
+This is my hyprland dotfile repo. If any one wants a minimal hyprland config this is very simple and easy to use..(Still in development tho)\n
 
-Btw i will also include an insall.sh in future, nrn cuz i am ricing for only 4 months rn but still it wont disappoint you
+Btw i will also include an insall.sh in future, nrn cuz i am ricing for only 4 months rn but still it wont disappoint you\n
 
 
-Put the .local file in HOME directory and the .zshrc file in .config
+Put the .local file in HOME directory and the .zshrc file in .config\n
 
-Now the impt part the dependencies of this setup are :-
-. Waybar (install waybar-cava-git from aur)
-. nitch
-. oh-my-zsh (https://ohmyz.sh/    go check it out!)
-. powerlevel10k, (when i go to powerlevel10k webpage go to instalation, select ohmyzsh in installation panel, and install it. After you do that in the zshrc file set theme to "powerlevel10k/powerlevel10k", this will launch setup)
+Now the impt part the dependencies of this setup are :-\n
+. Waybar (install waybar-cava-git from aur)\n
+. nitch\n
+. oh-my-zsh (https://ohmyz.sh/    go check it out!)\n
+. powerlevel10k, (when i go to powerlevel10k webpage go to instalation, select ohmyzsh in installation panel, and install it. After you do that in the zshrc file set theme to "powerlevel10k/powerlevel10k", this will launch setup)\n
 . matugen
 . swaync
 . swyosd
