@@ -20,7 +20,7 @@ Now the impt part the dependencies of this setup are :-
 . swyosd  
 . hyprlock  
 . bluetuith  
-. awww (do not use swww)
+. awww wallpaper utility
 . snappy switcher  
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that on youtube there is a video from saneaspect)  
