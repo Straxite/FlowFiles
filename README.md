@@ -13,8 +13,8 @@ Put the .local file in HOME directory and the .zshrc file in .config
 Now the impt part the dependencies of this setup are :-  
 . Waybar (install waybar-cava-git from aur)  
 . nitch  
-. oh-my-zsh (https://ohmyz.sh/    go check it out!)  
-. powerlevel10k, (when i go to powerlevel10k webpage go to instalation, select ohmyzsh in installation panel, and install it. After you do that in the zshrc file set theme to "powerlevel10k/powerlevel10k", this will launch setup)  
+. oh-my-zsh (https://ohmyz.sh/ |       go check it out!)  
+. powerlevel10k (https://github.com/romkatv/powerlevel10k | For installation just install it via ohmyzsh and when you clone it in your .zshrc change the theme to "p10kconfigure/p10kconfigure")  
 . matugen  
 . swaync  
 . swyosd  
