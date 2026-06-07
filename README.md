@@ -21,6 +21,7 @@ Now the impt part the dependencies of this setup are :-
 . hyprlock  
 . bluetuith  
 . snappy switcher  
+. Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that on youtube there is a video from saneaspect)  
 
 btw the basic KeyBindings for this setup are  
