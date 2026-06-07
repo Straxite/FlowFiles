@@ -14,7 +14,7 @@ Now the impt part the dependencies of this setup are :-
 . Waybar (install waybar-cava-git from aur)  
 . nitch  
 . oh-my-zsh (https://ohmyz.sh/ |       go check it out!)  
-. powerlevel10k (https://github.com/romkatv/powerlevel10k | For installation just install it via ohmyzsh and when you clone it in your .zshrc change the theme to "p10kconfigure/p10kconfigure")  
+. powerlevel10k (https://github.com/romkatv/powerlevel10k | For installation just install it via ohmyzsh and  when you clone it in your .zshrc change the theme to "p10kconfigure/p10kconfigure")  
 . matugen  
 . swaync  
 . swyosd  
