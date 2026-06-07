@@ -1,0 +1,92 @@
+/*****----- Global Properties -----*****/
+@import  "colors.rasi"
+
+/*****----- Configuration -----*****/
+configuration {
+    font:                       "JetBrainsMono Nerd Font Propo 12";
+    show-icons:                 true;
+    display-drun:               "Launchpad";
+    drun-display-format:        "{name}";
+}
+
+* {
+    background-color:           @surface;
+    text-color:                 @fg;
+}
+
+/*****----- Main Window -----*****/
+window {
+    location:                   center;
+    anchor:                     center;
+    width:                      1000px;
+    background:                 @surface;
+    border-radius:              30px;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    background-color:           transparent;
+    children:                   [ inputbar, listview ];
+    spacing:                    20px;
+    padding:                    20px 20px;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    background-color:           @surface-container-high;
+    border-radius:              15px;
+    padding:                    15px;
+    spacing:                    20px;
+    children:                   [ prompt, entry ];
+}
+
+prompt {
+    background-color:           transparent;
+    text-color:                 @secondary;
+}
+
+entry {
+    background-color:           transparent;
+    text-color:                 @secondary;
+    placeholder:                "";
+    placeholder-color:          @primary;
+}
+
+/*****----- Listview -----*****/
+listview {
+    background-color:           transparent;
+    columns:                    5;
+    lines:                      3;
+    spacing:                    20px;
+    scrollbar:                  false;
+    layout:                     vertical;
+}
+
+/*****----- Elements -----*****/
+element {
+    background-color:           @surface;
+    padding:                    15px;
+    spacing:                    15px;
+    border-radius:              20px;
+    orientation:                vertical;
+    children:                   [ element-icon, element-text ];
+}
+
+element selected {
+    background-color:           @surface-container-high;
+    border:                     2px solid;
+    border-color:               @secondary;
+}
+
+element-icon {
+    background-color:           transparent;
+    size:                       90px;
+    horizontal-align:           0.5;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 @secondary;
+    horizontal-align:           0.5;
+    vertical-align:             0.5;
+}
