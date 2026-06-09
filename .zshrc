@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 # -- Alias
 alias i="yay -S"
-alias s="yay -s"
+alias s="yay -Ss"
 alias ls="eza --color=always --git --long"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 nitch
