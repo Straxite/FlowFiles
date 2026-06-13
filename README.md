@@ -1,4 +1,4 @@
-# FlowFiles
+## FlowFiles
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7661a64e-9857-4c9d-b29f-1e91293d9b2e" />
 
@@ -10,7 +10,7 @@ Btw i will also include an insall.sh in future, nrn cuz i am ricing for only 4 m
 
 Put the .local file in HOME directory and the .zshrc file in .config  
 
-Now the impt part the dependencies of this setup are :-  
+## Dependencies  
 . Waybar (install waybar-cava-git from aur)  
 . nitch  
 . oh-my-zsh (https://ohmyz.sh/ |       go check it out!)  
@@ -25,7 +25,7 @@ Now the impt part the dependencies of this setup are :-
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that | https://github.com/xCaptaiN09/pixie-sddm | Go check it out!)  
 
-btw the basic KeyBindings for this setup are  
+## Keybindings
 
 Open Terminal = alt + Q  
 Close Window = SUPER + Q  
