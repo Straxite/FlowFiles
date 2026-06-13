@@ -53,7 +53,6 @@ hl.window_rule({
   name      = "move-kitty",
   match     = { class = "kitty" },
   move      = {100, 100},
-  animation = "slidefade",
 })
 
 hl.layer_rule({
