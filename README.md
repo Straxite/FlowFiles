@@ -1,7 +1,6 @@
 # FlowFiles
 
-<img width="1920" height="1080" alt="2026-06-08-183643_hyprshot" src="https://github.com/user-attachments/assets/57cd0021-734f-4f63-aa08-002370bb7504" />
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7661a64e-9857-4c9d-b29f-1e91293d9b2e" />
 
 
 This is my hyprland dotfile repo. If any one wants a minimal hyprland config this is very simple and easy to use..(Still in development tho)  
