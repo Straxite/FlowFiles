@@ -2,6 +2,7 @@
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7661a64e-9857-4c9d-b29f-1e91293d9b2e" />
 
+##  
 Hieeee! Alex here..  
 Sooo, this repo is my Hyprland rice and i hope that you all love this..  
 As of now i have not included any 'install.sh' file but i will include it as soon as possible, to get the whole setup working, clone this repo and manually paste files to '.config' directory..  
