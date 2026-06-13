@@ -5,7 +5,7 @@
 Hieeee! Alex here..  
 Sooo, this repo is my Hyprland rice and i hope that you all love this..  
 As of now i have not included any 'install.sh' file but i will include it as soon as possible, to get the whole setup working, clone this repo and manually paste files to '.config' directory..  
-Thank You for visiting.. Love you yall!!  
+Thank You for visiting.. Love you yall !!  
 
 Put the .local file in HOME directory and the .zshrc file in .config  
 
