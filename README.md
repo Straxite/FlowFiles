@@ -2,11 +2,10 @@
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7661a64e-9857-4c9d-b29f-1e91293d9b2e" />
 
-
-This is my hyprland dotfile repo. If any one wants a minimal hyprland config this is very simple and easy to use..(Still in development tho)  
-
-Btw i will also include an insall.sh in future, nrn cuz i am ricing for only 4 months rn but still it wont disappoint you  
-
+Hieeee! Alex here..  
+Sooo, this repo is my Hyprland rice and i hope that you all love this..  
+As of now i have not included any 'install.sh' file but i will include it as soon as possible, to get the whole setup working, clone this repo and manually paste files to '.config' directory..  
+Thank You for visiting.. Love you yall!!  
 
 Put the .local file in HOME directory and the .zshrc file in .config  
 
