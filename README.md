@@ -21,7 +21,7 @@ Now the impt part the dependencies of this setup are :-
 . swyosd  
 . hyprlock  
 . bluetuith  
-. awww wallpaper utility
+. awww wallpaper utility  
 . snappy switcher  
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that | https://github.com/xCaptaiN09/pixie-sddm | Go check it out!)  
@@ -34,5 +34,5 @@ Reload waybar = SUPER + W
 App Launcher = alt + SPACE  
 Theme Layout Switcher = SUPER + SPACE  
 Files = SUPER + E  
-Power Menu = SUPER + M  
+Logout Menu = SUPER + M  
 
