@@ -11,8 +11,6 @@ Thank You for visiting.. Love you yall !!
 
 Put the .local file in HOME directory and the .zshrc file in .config  
 
-##
-
 ## Dependencies  
 . Waybar (install waybar-cava-git from aur)  
 . nitch  
@@ -28,8 +26,6 @@ Put the .local file in HOME directory and the .zshrc file in .config
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that | https://github.com/xCaptaiN09/pixie-sddm | Go check it out!)  
 
-##
-
 ## Keybindings
 
 Open Terminal = alt + Q  
@@ -39,5 +35,3 @@ App Launcher = alt + SPACE
 Theme Layout Switcher = SUPER + SPACE  
 Files = SUPER + E  
 Logout Menu = SUPER + M  
-
-##
