@@ -5,6 +5,7 @@
     primary-fixed-dim: #a0cafd;
     on-primary: #003258;
     on-primary-fixed: #001d36;
+
     on-primary-fixed-variant: #194975;
     primary-container: #194975;
     on-primary-container: #d1e4ff;
