@@ -71,8 +71,8 @@ hl.bind(ctrl .. " + UP", hl.dsp.exec_cmd("swayosd-client --output-volume raise -
 hl.bind(ctrl .. " + DOWN", hl.dsp.exec_cmd("swayosd-client --output-volume lower --max-volume 150"),        { locked = true, repeating = true })
 -- hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
 -- hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
--- hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
--- hl.bind(shift .. " + DOWN",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+-- hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("brightnessctl set 5%+"),                  { locked = true, repeating = true })
+-- hl.bind(shift .. " + DOWN",hl.dsp.exec_cmd("brightnessctl set 5%-"),                  { locked = true, repeating = true })
 hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("swayosd-client --brightness +10"),                  { locked = true, repeating = true })
 hl.bind(shift .. " + DOWN",  hl.dsp.exec_cmd("swayosd-client --brightness -10"),                  { locked = true, repeating = true })
 
