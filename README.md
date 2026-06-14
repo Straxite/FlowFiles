@@ -1,6 +1,6 @@
 ## FlowFiles
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/041192cd-457d-46fd-a120-e1a9bd782f6e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3d921671-e428-4e12-81b8-840d9c3e09bf" />
 
 
 ##  
