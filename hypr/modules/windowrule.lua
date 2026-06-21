@@ -75,4 +75,9 @@ hl.layer_rule({
   ignore_alpha  = 0.5,
 })
 
+hl.layer_rule({
+  match     = { namespace = "logout_dialog" },
+  blur      = true,
+})
+
 
