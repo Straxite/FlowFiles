@@ -25,6 +25,7 @@ Put the .local file in HOME directory and the .zshrc file in .config
 . snappy switcher  
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that | https://github.com/xCaptaiN09/pixie-sddm | Go check it out!)  
+. Momoisay (for the terminal animated girl | https://github.com/Mon4sm/momoisay | install it from here)  
 
 ## Keybindings
 
