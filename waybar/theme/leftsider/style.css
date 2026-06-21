@@ -57,8 +57,7 @@ button:hover {
     background: linear-gradient(
         to bottom,
         alpha(@primary, 1.0),   /* solid top */
-        alpha(@secondary, 0.6), /* mid fade */
-        alpha(@tertiary, 0.0) /* transparent bottom */);
+        alpha(@secondary, 0.6) /* mid fade */);
     border-radius: 3px;
     padding-top: 40px;
     padding-bottom: 40px;
