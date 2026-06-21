@@ -18,7 +18,7 @@ Put the .local file in HOME directory and the .zshrc file in .config
 . powerlevel10k (https://github.com/romkatv/powerlevel10k | For installation just install it via ohmyzsh and when you clone it, go to your .zshrc and change the theme to "powerlevel10k/powerlevel10k")  
 . matugen  
 . swaync  
-. swyosd  
+. sawyosd  
 . hyprlock  
 . bluetuith  
 . awww wallpaper utility  
