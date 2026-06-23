@@ -17,7 +17,7 @@
     },
     "format": "<span size='13000'></span>{capacity}",
     "format-warning": "<span size='13000'></span>{capacity}",
-    "format-critical": "<span size='13000'> </span>{capacity}",
+    "format-critical": "<span size='13000'></span>{capacity}",
     "format-charging": "<span size='13000'></span>",
     "format-plugged": "<span size='1'></span>",
     "format-alt": "<span size='13000'>{icon}</span> {time}",
