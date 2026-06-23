@@ -4,7 +4,7 @@
 
 
 ##  
-Hieeee! Alex here..  
+Hieeee! Indee here..  
 Sooo, this repo is my Hyprland rice and i hope that you all love this..  
 As of now i have not included any 'install.sh' file but i will include it as soon as possible, to get the whole setup working, clone this repo and manually paste files to '.config' directory..  
 Thank You for visiting.. Love you yall !!  
@@ -36,3 +36,18 @@ App Launcher = alt + SPACE
 Theme Layout Switcher = SUPER + SPACE  
 Files = SUPER + E  
 Logout Menu = SUPER + M  
+
+## Btw some Waybar layouts of this setup you may like em!!! ( BTW MY FAV ONES.. )
+1. The one in preview of OS is the Vertical waybar.  
+##  
+2. Velvetline  
+<img width="1920" height="56" alt="image" src="https://github.com/user-attachments/assets/96778feb-75bd-4e59-a053-2ed810ab4f13" />
+##  
+3. Dynamic Notch
+<img width="1920" height="70" alt="image" src="https://github.com/user-attachments/assets/6854691d-ccb9-4c50-a7f0-a348635d025b" />
+
+
+
+
+
+
