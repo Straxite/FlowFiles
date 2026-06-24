@@ -86,7 +86,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "launcher-launch-audio",
+    "on-click": "~/.config/rofi/Audio/audio.sh",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
