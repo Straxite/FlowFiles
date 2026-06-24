@@ -21,7 +21,7 @@
     "format-charging": "<span size='13000'></span>",
     "format-plugged": "<span size='1'></span>",
     "format-alt": "<span size='13000'>{icon}</span> {time}",
-    "format-full": "<span size='13000'> </span>",
+    "format-full": "<span size='13000'></span>",
     "format-icons": ["", "", "", "", ""],
     "tooltip-format": "{time}"
   },
