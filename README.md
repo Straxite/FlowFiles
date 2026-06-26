@@ -40,6 +40,8 @@ Files = SUPER + E
 Logout Menu = SUPER + M
 ```
 
+## Installation  
+
 
 
 
