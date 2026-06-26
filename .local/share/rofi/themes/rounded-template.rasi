@@ -19,7 +19,7 @@ window {
     border-radius:  24px;
 
     background-color:   @surface;
-    border:             2px;
+    border:             0px;
     border-color:       @tertiary;
 }
 
@@ -30,7 +30,7 @@ mainbox {
 inputbar {
     background-color:   @surface-container-high;
 
-    border:         2px;
+    border:         0px;
     border-color:   @tertiary;
     border-radius:  16px;
 
@@ -90,8 +90,8 @@ element alternate active {
 }
 
 element selected normal, element selected active {
-    background-color:   @surface-container-high;
-    border:             2px;
+    background-color:   @secondary-container;
+    border:             0px;
     border-color:       @tertiary;
 }
 
