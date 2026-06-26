@@ -117,7 +117,7 @@ source $ZSH/oh-my-zsh.sh
 alias i="yay -S"
 alias s="yay -Ss"
 alias ls="eza --color=always --git --long"
-alias wallhall="lutgen-studio"
+alias wallhall="lutgen-studio & disown"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 nitch
 function clear() {
