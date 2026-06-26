@@ -42,6 +42,11 @@ Logout Menu = SUPER + M
 
 ## Installation  
 
+Copy this command to clone the repo in "/home/USER" and make installation media executable -->
+```
+https://github.com/Straxite/FlowFiles.git && chmod +x ~/FlowFiles/install-script/orchestra-install.sh
+```
+
 
 
 
