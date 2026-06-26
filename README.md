@@ -26,6 +26,7 @@ Put the .local file in HOME directory and the .zshrc file in .config
 . Neue Machina Font, SF Pro Display Font, JetBrains Mono Nerd Font   
 . sddm (i use pixie theme for sddm its cute af, if u wanna use that | https://github.com/xCaptaiN09/pixie-sddm | Go check it out!)  
 . Momoisay (for the terminal animated girl | https://github.com/Mon4sm/momoisay | install it from here)  
+. This setup also uses LutgenStudio to generate wallpapers for particular themes so there are consistency among themes and walls (Install lutgen-studio-bin from the aur to use it and if you are using my .zshrc, use wallhall to open the app via terminal or use lutgen-studio & disown if you have your own .zshrc or .bashrc)  
 
 ## Keybindings
 
