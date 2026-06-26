@@ -30,13 +30,15 @@ Put the .local file in HOME directory and the .zshrc file in .config
 
 ## Keybindings
 
+```
 Open Terminal = alt + Q  
 Close Window = SUPER + Q  
 Reload waybar = SUPER + W  
 App Launcher = alt + SPACE  
 Theme Layout Switcher = SUPER + SPACE  
 Files = SUPER + E  
-Logout Menu = SUPER + M  
+Logout Menu = SUPER + M
+```
 
 
 
