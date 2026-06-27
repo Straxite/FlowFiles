@@ -12,11 +12,26 @@ RESET='\033[0m'
 
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
+    awww
     hyprlock
+    wlogout
+    xdg-desktop-portal-gnome
+    matugen
+    cava
+    peaclock
+    rofi
+    flatpak
+    yazi
+    htop
+    nwg-look
+    bluetuith
+    zsh
 )
 
 AUR_PACKAGES=(
     waybar-cava-git
+    helium-browser-bin
+    lutgen-studio-bin
 )
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
