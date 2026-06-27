@@ -48,7 +48,7 @@ https://github.com/Straxite/FlowFiles.git && chmod +x ~/FlowFiles/install-script
 ```
 Then Run the orchestra script by running this command -->  
 ```
-cd ~/FlowFiles/install-script/orchestra-script.sh
+cd ~/FlowFiles/install-script/ && orchestra-script.sh
 ```  
 
 
