@@ -83,6 +83,7 @@ CONFIG_FOLDERS=(
     swaync
     waybar
     wlogout
+    fastfetch
 )
 
 for folder in "${CONFIG_FOLDERS[@]}"; do
