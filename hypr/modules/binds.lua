@@ -34,7 +34,7 @@ hl.bind(alt .. " + TAB", hl.dsp.exec_cmd("snappy-switcher next"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/hypr/scripts/lutgen.sh"))
-hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("gsr-ui"))
+hl.bind(mainMod .. " + z", hl.dsp.exec_cmd("gsr-ui"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
