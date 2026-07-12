@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install-packages.sh
+# packages.sh
 # Installs all required packages for the Hyprland setup
 
 # ── Colors ────────────────────────────────────────────────────────────────────
