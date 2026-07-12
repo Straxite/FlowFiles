@@ -25,6 +25,7 @@ PACMAN_PACKAGES=(
     nwg-look
     zsh
     waybar
+    fastfetch
 )
 
 AUR_PACKAGES=(
