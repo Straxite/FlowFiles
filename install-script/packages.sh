@@ -23,6 +23,7 @@ PACMAN_PACKAGES=(
     yazi
     htop
     nwg-look
+    gpu-screen-recorder-ui
     zsh
     waybar
     fastfetch
