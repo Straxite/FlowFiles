@@ -21,6 +21,7 @@ PACMAN_PACKAGES=(
     rofi
     flatpak
     yazi
+    pavucontrol
     htop
     nwg-look
     gpu-screen-recorder-ui
