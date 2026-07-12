@@ -34,6 +34,7 @@ AUR_PACKAGES=(
     lutgen-studio-bin
     peaclock
     nitch
+    visual-studio-code-bin
     bluetuith
     adw-gtk-theme-git
 )
