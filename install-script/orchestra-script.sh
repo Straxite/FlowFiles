@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# orchestra.sh
+# orchestra-script.sh
 # Main entry point for the Flow OS installer
 
 # ── Colors ────────────────────────────────────────────────────────────────────
