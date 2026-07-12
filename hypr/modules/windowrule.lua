@@ -101,3 +101,8 @@ hl.window_rule({
   float     = true,
   size      = {1200, 800},
 })
+
+hl.layer_rule({
+  match     = { namespace = "rofi" },
+  dim_around      = true,
+})
