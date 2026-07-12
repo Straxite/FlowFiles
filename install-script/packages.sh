@@ -18,6 +18,8 @@ PACMAN_PACKAGES=(
     matugen
     cava
     rofi
+    curl
+    perl
     flatpak
     yazi
     pavucontrol
@@ -103,6 +105,12 @@ print_header "Installing AUR packages"
 for pkg in "${AUR_PACKAGES[@]}"; do
     install_aur "$pkg"
 done
+
+# ── Oh My ZSH ─────────────────────────────────────────────────────────────────
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# ── Power Level 10K ───────────────────────────────────────────────────────────
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo -e "\n${BOLD}${GREEN}==> All done!${RESET}"
