@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# make_scripts_executable.sh
+# executable-maker.sh
 # Makes every script file in ~/.config executable (recursively)
  
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
