@@ -14,7 +14,6 @@ RESET='\033[0m'
 PACMAN_PACKAGES=(
     awww
     hyprlock
-    wlogout
     xdg-desktop-portal-gnome
     matugen
     cava
@@ -35,6 +34,7 @@ AUR_PACKAGES=(
     lutgen-studio-bin
     peaclock
     nitch
+    wlogout
     visual-studio-code-bin
     bluetuith
     adw-gtk-theme-git
