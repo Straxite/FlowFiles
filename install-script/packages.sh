@@ -32,6 +32,7 @@ AUR_PACKAGES=(
     helium-browser-bin
     lutgen-studio-bin
     peaclock
+    nitch
     bluetuith
     adw-gtk-theme-git
 )
