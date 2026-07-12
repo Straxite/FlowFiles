@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-chmod +x ~/.config/install-script/*.sh
+chmod +x /FlowFiles/install-script/*.sh
