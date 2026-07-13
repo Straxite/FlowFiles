@@ -29,6 +29,10 @@ PACMAN_PACKAGES=(
     zsh
     waybar
     fastfetch
+    ttf-jetbrains-mono-nerd
+    otf-font-awesome
+    zed
+    nemo-fileroller
 )
 
 AUR_PACKAGES=(
@@ -111,6 +115,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # ── Power Level 10K ───────────────────────────────────────────────────────────
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+# ── Momoisay ──────────────────────────────────────────────────────────────────
+git clone https://github.com/Mon4sm/Momoisay.git
+cd Momoisay
+sudo sh ./install/linux.sh
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo -e "\n${BOLD}${GREEN}==> All done!${RESET}"
