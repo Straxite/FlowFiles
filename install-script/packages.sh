@@ -39,6 +39,7 @@ AUR_PACKAGES=(
     helium-browser-bin
     lutgen-studio-bin
     peaclock
+    cmatrix-git
     nitch
     wlogout
     visual-studio-code-bin
