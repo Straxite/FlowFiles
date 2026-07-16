@@ -35,9 +35,9 @@ hl.config({
 
         shadow = {
             enabled      = true,
-            range        = 15,
+            range        = 2,
             render_power = 1,
-            color        = C.scrim,
+            color        = C.on_primary,
         },
 
         blur = {
