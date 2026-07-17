@@ -20,6 +20,9 @@ PACMAN_PACKAGES=(
     rofi
     curl
     perl
+    wl-clipboard
+    cliphist
+    rofimoji
     flatpak
     yazi
     pavucontrol
