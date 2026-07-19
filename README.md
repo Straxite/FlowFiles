@@ -49,7 +49,10 @@ git clone https://github.com/Straxite/FlowFiles.git && chmod +x ~/FlowFiles/inst
 Then Run the orchestra script by running this command -->  
 ```
 cd ~/FlowFiles/install-script/ && ./orchestra-script.sh
-```  
+```
+
+<img width="1107" height="558" alt="flow" src="https://github.com/user-attachments/assets/341900d6-22de-429f-8a0c-77974b15ecb4" />
+
 
 
 
