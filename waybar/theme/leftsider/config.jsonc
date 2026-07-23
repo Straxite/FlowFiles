@@ -12,7 +12,7 @@
   "clock#right": {
     "interval": 60,
     "format": "{:%M}",
-    "max-length": 25,    
+    "max-length": 25,
   },
   "battery": {
     "states": {
@@ -34,7 +34,8 @@
     "format-ethernet": "<span size='13000' foreground='#f5e0dc'></span>󰤭",
     "format-linked": "",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'></span>",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "kitty --class impala-nm -e impala-nm",
   },
   "pulseaudio": {
       "format": "{icon}",
@@ -47,7 +48,7 @@
   "pulseaudio/slider": {
       "min" : 0,
       "max" : 130,
-      "orientation": "vertical", 
+      "orientation": "vertical",
   },
   "hyprland/workspaces": {
 	    "format": "{icon}",
@@ -151,6 +152,3 @@
     ]
   }
 }
-
-
-

@@ -23,10 +23,10 @@
 	"orientation": "inherit",
 	"modules": [
     "clock",
-    "custom/screenrecording-indicator", 
+    "custom/screenrecording-indicator",
     "custom/update",
     "custom/idle-indicator",
-    "custom/notification-silencing-indicator", 
+    "custom/notification-silencing-indicator",
 	]
 },
 
@@ -58,7 +58,7 @@
     "on-click": "omarchy-menu",
     "on-click-right": "xdg-terminal-exec",
   },
-  
+
   "hyprland/workspaces": {
 	  "on-click": "activate",
         "format": "{icon}",
@@ -125,7 +125,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "kitty --class impala-nm -e impala-nm",
   },
 
   "battery": {
@@ -172,7 +172,7 @@
       ]
     }
   },
-  
+
   "group/center3-expander": {
     "orientation": "inherit",
     "drawer": {
@@ -232,7 +232,7 @@
     "signal": 9,
     "return-type": "json"
   },
-  
+
   "custom/notification-silencing-indicator": {
     "on-click": "omarchy-toggle-notification-silencing",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
