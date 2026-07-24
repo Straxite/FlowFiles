@@ -22,6 +22,7 @@ PACMAN_PACKAGES=(
     perl
     wl-clipboard
     cargo
+    hyprshot
     cliphist
     rofimoji
     flatpak
