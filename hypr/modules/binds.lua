@@ -24,7 +24,6 @@ hl.bind(mainMod .. " + V", function()
 end)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(alt .. " + SPACE", hl.dsp.exec_cmd("~/.config/rofi/launchers/launcher.sh"))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("wlogout -b 6 -m 400 -r 20 -c 20 --buttons-per-row 5"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/rofi/layouts/layout.sh"))
@@ -39,12 +38,15 @@ hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty --class yazi -e yazi"))
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty --class htop -e htop"))
 hl.bind(alt .. " + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard/launcher.sh"))
 hl.bind("CTRL + SUPER + SPACE", hl.dsp.exec_cmd("rofimoji --action copy"))
+
+-- Move windows
 hl.bind("ALT + UP", hl.dsp.window.move( { direction = "up" } ))
 hl.bind("ALT + DOWN", hl.dsp.window.move( { direction = "down" } ))
 hl.bind("ALT + LEFT", hl.dsp.window.move( { direction = "left" } ))
 hl.bind("ALT + RIGHT", hl.dsp.window.move( { direction = "right" } ))
 
-
+-- Cycle through windows
+hl.bind("SUPER + RIGHT", hl.dsp.window.cycle_next( { direction = "left" } ))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
