@@ -2,8 +2,8 @@
 
 * {
     all: unset;
-    font-family: "JetBrains Mono Nerd Font Propo", monospace;
-    font-size: 16px;
+    font-family: "SF Pro Display, JetBrains Mono Nerd Font Propo", monospace;
+    font-size: 22px;
     min-height: 0;
     font-weight: bold;
 }
@@ -14,14 +14,9 @@ window#waybar {
 }
 
 .modules-right {
-    background-color: @surface_container_highest;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 3px;
-    margin-right: 3px;
-    margin-bottom: 3px;
-    margin-bottom: 3px;
 }
 
 button {
@@ -57,12 +52,12 @@ button:hover {
     color: @scrim;
     background: linear-gradient(
         to bottom,
-        alpha(@primary, 1.0),   /* solid top */
-        alpha(@secondary, 0.6), /* mid fade */
-        alpha(@tertiary, 0.0) /* transparent bottom */);
+        alpha(@primary, 1),
+        /* solid top */ alpha(@secondary, 0.6) /* mid fade */
+    );
     border-radius: 3px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin-top: 3px;
     margin-bottom: 3px;
     transition: 0.25s ease;
@@ -81,12 +76,12 @@ button:hover {
 #tray,
 #mode,
 #scratchpad {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #clock.date {
@@ -117,37 +112,57 @@ button:hover {
 #network,
 #pulseaudio,
 #battery,
-#custom-launcher,
 #custom-notification,
 #temperature {
-    border-radius: 99px;
+    background-color: alpha(@primary, 0.1);
+    font-size: 16px;
+    border-radius: 9px;
     font-weight: 600;
-    padding-left: 3px;
-    padding-left: 3px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    padding: 3px 4px 3px 4px;
+    margin: 5px 5px 5px 5px;
+}
+
+#custom-launcher {
+    background-color: alpha(@primary, 0.1);
+    font-size: 16px;
+    border-radius: 9px;
+    font-weight: 600;
+    padding: 3px 2px 3px 2px;
+    margin: 5px 5px 5px 5px;
 }
 
 #clock {
+    color: @primary;
     border-radius: 99px;
-    font-weight: 800;
+    font-family: Neue Machina;
+    font-weight: 900;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     margin-top: 8px;
     margin-bottom: 0px;
+}
 
+#clock#right {
+    color: @primary;
+    border-radius: 99px;
+    font-weight: 900;
+    font-family: Neue Machina;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #workspaces {
     border-radius: 99px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
     padding-top: 4px;
-    padding-bottom:4px;
+    padding-bottom: 4px;
     margin-top: 8px;
     margin-bottom: 0px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #cava {
@@ -159,4 +174,45 @@ button:hover {
     padding-bottom: 5px;
     margin-top: 8px;
     margin-bottom: 0px;
+}
+
+#custom-separator {
+    margin-top: 8px;
+}
+
+#pulseaudio-slider {
+    padding: 0;
+    border-radius: 9px;
+    margin: 0;
+}
+#pulseaudio-slider slider {
+    border-radius: 2px;
+    background: @primary;
+    min-width: 10px;
+}
+#pulseaudio-slider trough {
+    min-height: 150px;
+    border-radius: 5px;
+    background: @scrim;
+    min-width: 10px;
+}
+#pulseaudio-slider highlight {
+    border-radius: 5px;
+    background: linear-gradient(
+        to bottom,
+        alpha(@primary, 1),
+        /* solid top */ alpha(@secondary, 0.6) /* mid fade */
+    );
+    min-width: 10px;
+}
+
+.audio-modules {
+    transition: all 1s ease-in-out;
+    transition-delay: 1s;
+}
+
+tooltip {
+    border-radius: 15px;
+    background: @surface_container;
+    border: 2px solid alpha(@primary, 0.5);
 }

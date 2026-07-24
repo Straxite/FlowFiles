@@ -1,13 +1,18 @@
 {
+  "layer":    "top",
   "position": "left",
-  "modules-left": ["custom/launcher", "clock", "cava"],
+  "modules-left": ["custom/launcher", "clock","clock#right","group/misc", "cava"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["network","pulseaudio","battery"],
+  "modules-right": ["group/audio","network","battery"],
   "clock": {
     "interval": 60,
-    "format": "{:%H:%M}",
+    "format": "{:%H}",
     "max-length": 25,
-    "rotate": 270,
+  },
+  "clock#right": {
+    "interval": 60,
+    "format": "{:%M}",
+    "max-length": 25,
   },
   "battery": {
     "states": {
@@ -29,15 +34,21 @@
     "format-ethernet": "<span size='13000' foreground='#f5e0dc'></span>󰤭",
     "format-linked": "",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'></span>",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "kitty --class impala-nm -e impala-nm",
   },
   "pulseaudio": {
       "format": "{icon}",
       "format-muted": "",
       "format-icons": {
-          "default": ["", "", " "]
+          "default": [""]
       },
       "on-click": "~/.config/rofi/Audio/audio.sh"
+  },
+  "pulseaudio/slider": {
+      "min" : 0,
+      "max" : 130,
+      "orientation": "vertical",
   },
   "hyprland/workspaces": {
 	    "format": "{icon}",
@@ -59,7 +70,7 @@
   },
   "custom/launcher": {
     "format": "󰣇",
-    "on-click": "~/.config/rofi/launchers/type-3/launcher.sh",
+    "on-click": "~/.config/rofi/launchers/launcher.sh",
   },
   "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
@@ -96,8 +107,48 @@
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°"
+  },
+  "custom/separator": {
+    "format": "|",
+    "rotate": 90,
+  },
+  "group/misc": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "misc-modules",
+      "transition-top-to-bottom": false,
+    },
+    "modules": [
+      "custom/separator",
+      "custom/notification",
+    ]
+  },
+"group/misc2": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "misc-modules",
+      "transition-bottom-to-top": true,
+    },
+    "modules": [
+      "custom/separator",
+      "network",
+      "pulseaudio",
+      "battery",
+    ]
+  },
+  "group/audio": {
+    "orientation": "vertical",
+    "drawer": {
+      "transition-duration": 500,
+      "reveal-delay": 10000,
+      "children-class": "audio-modules",
+      "transition-top-to-bottom": false,
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  }
 }
-}
-
-
-
