@@ -25,6 +25,8 @@ hl.config({
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        accel_profile = "flat",
+        force_no_accel = false,
 
         touchpad = {
             natural_scroll = false,
@@ -42,5 +44,11 @@ hl.gesture({
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
     name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+    sensitivity = 0,
+    accel_profile = "flat",
+})
+
+hl.device({
+    name        = "msft0001:01-04f3:31be-touchpad",
+    accel_profile = "adaptive",
 })
