@@ -1,6 +1,6 @@
 ## FlowFiles
 
-[![Stars](https://img.shields.io/github/stars/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes)
+[![Stars](https://img.shields.io/github/stars/Straxite/Flowfiles?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/Straxite/FlowFiles)
 [![Forks](https://img.shields.io/github/forks/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124&cacheSeconds=3600)](https://github.com/HANCORE-linux/waybar-themes/network)
 [![Issues](https://img.shields.io/github/issues/HANCORE-linux/waybar-themes?style=for-the-badge&labelColor=000000&color=df6124&logo=github&logoColor=df6124)](https://github.com/HANCORE-linux/waybar-themes/issues)
 
