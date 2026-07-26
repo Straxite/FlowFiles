@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-options="Catppuccin\nTokyoNight\nRandom\nOneDark"
+options="Catppuccin\nTokyoNight\nRandom\nOneDark\nAnime\nRosePine\nGruvbox"
 
 # Show rofi menu
 chosen=$(printf "$options" | rofi -dmenu \
@@ -21,5 +21,14 @@ case "$chosen" in
         ;;
     OneDark)
         ~/.config/rofi/themes/scripts/onedark.sh
+        ;;
+    Anime)
+        ~/.config/rofi/themes/scripts/Anime.sh
+        ;;
+    RosePine)
+        ~/.config/rofi/themes/scripts/RosePine.sh
+        ;;
+    Gruvbox)
+        ~/.config/rofi/themes/scripts/Gruvbox.sh
         ;;
 esac
