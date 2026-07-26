@@ -119,11 +119,9 @@ alias s="yay -Ss"
 alias ls="eza --color=always --git --long"
 alias wallhall="lutgen-studio & disown"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-nitch
 function clear() {
     command clear
     sleep 0.05
-    nitch
 }
 
 # Created by `pipx` on 2026-07-21 16:27:01
