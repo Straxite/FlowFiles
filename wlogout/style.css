@@ -8,7 +8,7 @@
 @import "colors.css";
 
 window {
-    background-color: transparent;
+    background-color: alpha(@tertiary, 0.1);
 }
 
 button {
