@@ -45,13 +45,11 @@ hl.bind("ALT + DOWN", hl.dsp.window.move( { direction = "down" } ))
 hl.bind("ALT + LEFT", hl.dsp.window.move( { direction = "left" } ))
 hl.bind("ALT + RIGHT", hl.dsp.window.move( { direction = "right" } ))
 
--- Cycle through windows
-hl.bind("SUPER + RIGHT", hl.dsp.window.cycle_next( { direction = "left" } ))
-
--- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+-- Change the focus on of Windows
+hl.bind("SUPER + RIGHT", hl.dsp.focus( { direction = "right" } ))
+hl.bind("SUPER + LEFT", hl.dsp.focus( { direction = "left" } ))
+hl.bind("SUPER + UP", hl.dsp.focus( { direction = "up" } ))
+hl.bind("SUPER + DOWN", hl.dsp.focus( { direction = "down" } ))
 
 -- For waybar
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/.config/waybar/scripts/waybar.sh"))
