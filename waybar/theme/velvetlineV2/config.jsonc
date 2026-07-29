@@ -7,7 +7,6 @@
   "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "mpris",
     "group/tray-expander",
     "backlight",
     "network",
