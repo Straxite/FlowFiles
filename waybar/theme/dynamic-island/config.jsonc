@@ -3,7 +3,7 @@
   "layer": "top",
   "width":    1000,
   "modules-left": [],
-  "modules-center": ["clock","hyprland/workspaces","network","pulseaudio","battery"],
+  "modules-center": ["clock","mpris","hyprland/workspaces","network","pulseaudio","battery"],
   "modules-right": [],
   "clock": {
     "interval": 60,
@@ -92,5 +92,19 @@
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": "   {temperatureC}°"
-}
+  },
+  "mpris": {
+    "player": "spotify",
+    "format": "| {status_icon} {title} |",
+    "format-paused": "| {status_icon} {title} |",
+    "player-icons": {
+        "spotify": "󰓇"
+    },
+    "status-icons": {
+        "playing": "",
+        "paused": "",
+        "stopped": ""
+    },
+    "max-length": 40
+  }
 }

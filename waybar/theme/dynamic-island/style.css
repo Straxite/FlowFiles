@@ -9,8 +9,8 @@
     background-color: @surface_container;
     color: @secondary;
     border-radius: 100px;
-    margin: 10px 0px;
-    border: 2px solid @scrim;
+    margin: 10px 0px 0px 0px;
+    border: 1px @scrim;
 }
 
 #workspaces {
@@ -103,4 +103,9 @@ tooltip {
     border-radius: 15px;
     background: @surface_container;
     border: 2px solid alpha(@primary, 0.5);
+}
+
+#mpris {
+    color: @tertiary;
+    font-weight: 800;
 }
