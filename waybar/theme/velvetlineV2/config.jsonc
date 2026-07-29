@@ -4,7 +4,7 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "group/app-expander"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "mpris",
@@ -38,9 +38,10 @@
     },
   },
   "custom/launcher": {
-    "format": "<span font='launcher'>\ue900</span>",
+    "format": "{icon}",
+    "format-icons": "",
     "on-click": "~/.config/rofi/launchers/launcher.sh",
-    "on-click-right": "xdg-terminal-exec",
+    "on-click-right": "kitty",
     "tooltip-format": "launcher Menu\n\nAlt + Space",
   },
   "cpu": {
@@ -95,7 +96,7 @@
     "format-connected": "",
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "launcher-launch-bluetooth",
+    "on-click": "kitty --class bluetuith -e bluetuith",
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -123,7 +124,7 @@
     "tooltip": false,
   },
     "custom/expand-icon2": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
   },
   "group/app-expander": {
