@@ -10,7 +10,6 @@
     color: @secondary;
     border-radius: 100px;
     margin: 10px 0px 0px 0px;
-    border: 1px @scrim;
 }
 
 #workspaces {
