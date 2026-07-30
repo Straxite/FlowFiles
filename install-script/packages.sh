@@ -125,9 +125,15 @@ cd Momoisay
 sudo sh ./install/linux.sh
 
 # ── Impala-NM ─────────────────────────────────────────────────────────────────
-
 cargo install impala-nm
 
+# ── Hyprland-Plugins ──────────────────────────────────────────────────────────
+
+hyprpm update
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm add https://github.com/yayuuu/hyprland-scroll-overview.git
+hyprpm update
+hyprpm enable scrolloverview
 # ── Oh My ZSH ─────────────────────────────────────────────────────────────────
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
