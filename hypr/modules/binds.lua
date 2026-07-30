@@ -38,6 +38,9 @@ hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty --class yazi -e yazi"))
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty --class htop -e htop"))
 hl.bind(alt .. " + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard/launcher.sh"))
 hl.bind("CTRL + SUPER + SPACE", hl.dsp.exec_cmd("rofimoji --action copy"))
+hl.bind("ALT + TAB", function()
+    hl.plugin.scrolloverview.overview("toggle all")
+end)
 
 -- Move windows
 hl.bind("ALT + UP", hl.dsp.window.move( { direction = "up" } ))

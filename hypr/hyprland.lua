@@ -9,6 +9,7 @@ require("modules.animations")
 require("modules.misc")
 require("modules.windowrule")
 require("colors")
+require("modules.plugins")
 
 
 -- ecosystem --
