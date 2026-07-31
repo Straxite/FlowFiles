@@ -9,7 +9,7 @@ hl.curve("easeInQuart", { type = "bezier", points = { { 0.5, 0 }, { 0.75, 0 } } 
 hl.curve("easeOutExpo", { type = "bezier", points = { { 0.16, 1 }, { 0.3, 1 } } })
 hl.curve("easeInExpo", { type = "bezier", points = { { 0.7, 0 }, { 0.84, 0 } } })
 hl.curve("easeInBack", { type = "bezier", points = { { 0.36, 0 }, { 0.66, -0.56 } } })
-hl.curve("easeOutMotion", { type = "bezier", points = { { 0.2, 1.22 }, { 0.89, 1 } } })
+hl.curve("easeOutMotion", { type = "bezier", points = { { 0.2, 1 }, { 0.89, 1 } } })
 hl.curve("easeInMotion", { type = "bezier", points = { { 0, 1 }, { 1, 1 } } })
 
 
@@ -35,9 +35,9 @@ hl.animation({ leaf = "layersOut", enabled = true, speed = 20, bezier = "easeOut
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
 
-hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "easeOutExpo", style = "slidevert" })
-hl.animation({ leaf = "workspacesIn", enabled = true, speed = 4, bezier = "easeOutExpo", style = "slidevert" })
-hl.animation({ leaf = "workspacesOut", enabled = true, speed = 4, bezier = "easeOutExpo", style = "slidevert" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "easeOutMotion", style = "slidevert" })
+hl.animation({ leaf = "workspacesIn", enabled = true, speed = 4, bezier = "easeOutMotion", style = "slidevert" })
+hl.animation({ leaf = "workspacesOut", enabled = true, speed = 4, bezier = "easeOutMotion", style = "slidevert" })
 
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
