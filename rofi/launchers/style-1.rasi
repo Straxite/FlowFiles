@@ -1,97 +1,70 @@
-/*****----- Global Properties -----*****/
-@import  "colors.rasi"
+@import "colors.rasi"
+entry {
+    placeholder: "";
+    text-color: @secondary;
+    padding: 8px 0 8px 8px;
+}
 
-/*****----- Configuration -----*****/
 configuration {
-    font:                       "JetBrainsMono Nerd Font Propo 12";
-    show-icons:                 true;
-    display-drun:               "Launchpad";
-    drun-display-format:        "{name}";
+    font: "JetBrainsMono Nerd Font Propo 12";
+    lines: 10;
+    fixed-num-lines: true;
+    padding: 10px;
+}
+
+inputbar {
+    children: [entry];
 }
 
 * {
-    background-color:           @surface;
-    text-color:                 @scrim;
+    background-color: @surface;
 }
 
-/*****----- Main Window -----*****/
-window {
-    location:                   center;
-    anchor:                     center;
-    width:                      1000px;
-    background:                 @surface;
-    border-color:               @tertiary;
-    border:                     0px;
-    border-radius:              30px;
-}
-
-/*****----- Main Box -----*****/
 mainbox {
-    background-color:           transparent;
-    children:                   [ inputbar, listview ];
-    spacing:                    20px;
-    padding:                    20px 20px;
+    border: 2px;
+    border-color: @surface;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-/*****----- Inputbar -----*****/
-inputbar {
-    background-color:           @surface-container-high;
-    border:                     0px;
-    border-color:               @tertiary;
-    border-radius:              18px;
-    padding:                    15px;
-    spacing:                    20px;
-    children:                   [ prompt, entry ];
+window {
+    border-radius: 11px;
+    border: 1px solid;
+    border-color: @surface;
+    background: @surface;
+    padding: 0px;
+    width: 30%;
 }
 
-prompt {
-    background-color:           transparent;
-    text-color:                 @secondary;
-}
 
-entry {
-    background-color:           transparent;
-    text-color:                 @secondary;
-    placeholder:                "";
-    placeholder-color:          @primary;
-}
-
-/*****----- Listview -----*****/
 listview {
-    background-color:           transparent;
-    columns:                    4;
-    lines:                      3;
-    spacing:                    20px;
-    scrollbar:                  false;
-    layout:                     vertical;
+    lines: 10;
+    dynamic:                    true;
+    fixed-height:               false;
 }
 
-/*****----- Elements -----*****/
 element {
-    background-color:           @surface;
-    padding:                    15px;
-    spacing:                    15px;
-    border-radius:              20px;
-    orientation:                vertical;
-    children:                   [ element-icon, element-text ];
-}
-
-element selected {
-    background-color:           @secondary-container;
-    border:                     0px solid;
-    border-color:               @tertiary;
-    text-color:                 @scrim;
-}
-
-element-icon {
-    background-color:           transparent;
-    size:                       90px;
-    horizontal-align:           0.5;
+    padding: 10px 10px;
+    height: 50px;
+    border-radius: 5px;
+    children: [ element-text, element-icon ];
 }
 
 element-text {
-    background-color:           transparent;
-    text-color:                 @secondary;
-    horizontal-align:           0.5;
-    vertical-align:             0.5;
+    text-color: @secondary;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @secondary-container;
+}
+
+element-icon {
+    background-color: transparent;
+}
+
+#scrollbar {
+    handle-color: @tertiary;
+    handle-width: 4px ;
+    padding: 0;
 }
