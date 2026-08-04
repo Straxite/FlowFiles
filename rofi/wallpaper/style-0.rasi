@@ -13,12 +13,12 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    width:                       985px;
+    width:                       989px;
     x-offset:                    0px;
     y-offset:                    0px;
     enabled:                     true;
     border:                      0px;
-    border-radius:               10px 10px 10px 10px;
+    border-radius:               25px 25px 25px 25px;
     border-color:                @tertiary;
     background-color:            @surface;
 }
@@ -39,11 +39,12 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
+    padding:                     15px;
     border:                      0px;
     border-radius:               18px;
     border-color:                @tertiary;
     text-color:                  @secondary;
-    background-color:            transparent;
+    background-color:            @surface-container-high;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -78,7 +79,7 @@ listview {
     layout:                      horizontal;
     reverse:                     false;
     fixed-height:                false;
-
+    
     spacing:                     0px;
     background-color:            transparent;
 }
@@ -101,7 +102,7 @@ element normal.normal {
 element selected.normal {
     background-color:            @secondary-container;
     text-color:                  @scrim;
-    border-radius:               10;
+    border-radius:               25;
     border:                      1px;
     border-color:                @tertiary;
 }

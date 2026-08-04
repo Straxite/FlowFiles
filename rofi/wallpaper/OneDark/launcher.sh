@@ -28,7 +28,7 @@ SELECTED_NAME=$(echo "$WALLPAPERS" | while IFS= read -r img; do
     printf "%s\x00icon\x1f%s\n" "$(basename "$img")" "$img"
 done | rofi -dmenu \
     -show-icons \
-    -p "Select Wallpaper" \
+    -p "" \
     -theme "${dir}/${theme}.rasi")
 
 # Exit if nothing selected

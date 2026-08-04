@@ -16,7 +16,7 @@ theme='style-1'
 ## Run
 #!/usr/bin/env bash
 
-WALL_DIR="$HOME/.config/backgrounds/Everforest"
+WALL_DIR="$HOME/.config/backgrounds/OneDark"
 
 # Get sorted list of wallpapers (full paths)
 WALLPAPERS=$(find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webp" \) | sort)
@@ -28,7 +28,7 @@ SELECTED_NAME=$(echo "$WALLPAPERS" | while IFS= read -r img; do
     printf "%s\x00icon\x1f%s\n" "$(basename "$img")" "$img"
 done | rofi -dmenu \
     -show-icons \
-    -p "Select Wallpaper" \
+    -p "" \
     -theme "${dir}/${theme}.rasi")
 
 # Exit if nothing selected
