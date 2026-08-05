@@ -34,34 +34,28 @@ notify_volume() {
     local ICON TITLE MSG URGENCY
  
     if $MUTED; then
-        ICON="$ICON_DIR/volume-muted.svg"
-        TITLE="Volume: Muted "
-        MSG="Current volume is ${VOL_PCT}% (muted)"
+        ICON="$ICON_DIR/volume-muted.png"
+        TITLE="Volume: Muted"
         URGENCY="normal"
     elif [ "$VOL_PCT" -eq 0 ]; then
-        ICON="$ICON_DIR/volume-muted.svg"
-        TITLE="Volume: 0% "
-        MSG="Volume: Muted"
+        ICON="$ICON_DIR/volume-muted.png"
+        TITLE="Volume: 0%"
         URGENCY="low"
     elif [ "$VOL_PCT" -le 33 ]; then
-        ICON="$ICON_DIR/volume-low.svg"
-        TITLE="Volume: ${VOL_PCT}% 󰕿"
-        MSG="Volume: Low"
+        ICON="$ICON_DIR/volume-low.png"
+        TITLE="Volume: ${VOL_PCT}%"
         URGENCY="low"
     elif [ "$VOL_PCT" -le 66 ]; then
-        ICON="$ICON_DIR/volume-medium.svg"
-        TITLE="Volume: ${VOL_PCT}% 󰖀"
-        MSG="Volume: Medium"
+        ICON="$ICON_DIR/volume-medium.png"
+        TITLE="Volume: ${VOL_PCT}%"
         URGENCY="low"
     elif [ "$VOL_PCT" -le 100 ]; then
-        ICON="$ICON_DIR/volume-high.svg"
-        TITLE="Volume: ${VOL_PCT}% 󰕾"
-        MSG="Volume: High"
+        ICON="$ICON_DIR/volume-high.png"
+        TITLE="Volume: ${VOL_PCT}%"
         URGENCY="low"
     else
-        ICON="$ICON_DIR/volume-high.svg"
-        TITLE="Volume: ${VOL_PCT}% 󰕾"
-        MSG="Volume: V-High"
+        ICON="$ICON_DIR/volume-high.png"
+        TITLE="Volume: ${VOL_PCT}%"
         URGENCY="normal"
     fi
  

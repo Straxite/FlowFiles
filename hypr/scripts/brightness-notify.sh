@@ -28,25 +28,25 @@ notify_brightness() {
     local PCT="$1"
     local ICON TITLE MSG URGENCY
  
-    if [ "$PCT" -eq 0 ]; then
-        ICON="$ICON_DIR/brightness-off.svg"
-        TITLE="Brightness: 0% 🌑"
-        MSG="Screen is at minimum brightness"
+    if [ "$PCT" -eq 20 ]; then
+        ICON="$ICON_DIR/brightness-20.png"
+        TITLE="Brightness: 0%"
         URGENCY="low"
-    elif [ "$PCT" -le 33 ]; then
-        ICON="$ICON_DIR/brightness-low.svg"
-        TITLE="Brightness: ${PCT}% 🔅"
-        MSG="Low brightness"
+    elif [ "$PCT" -le 40 ]; then
+        ICON="$ICON_DIR/brightness-40.png"
+        TITLE="Brightness: ${PCT}%"
         URGENCY="low"
-    elif [ "$PCT" -le 66 ]; then
-        ICON="$ICON_DIR/brightness-medium.svg"
-        TITLE="Brightness: ${PCT}% 🔆"
-        MSG="Medium brightness"
+    elif [ "$PCT" -le 60 ]; then
+        ICON="$ICON_DIR/brightness-60.png"
+        TITLE="Brightness: ${PCT}%"
+        URGENCY="low"
+    elif [ "$PCT" -le 80 ]; then
+        ICON="$ICON_DIR/brightness-80.png"
+        TITLE="Brightness: ${PCT}%"
         URGENCY="low"
     else
-        ICON="$ICON_DIR/brightness-high.svg"
-        TITLE="Brightness: ${PCT}% ☀️"
-        MSG="High brightness"
+        ICON="$ICON_DIR/brightness-100.png"
+        TITLE="Brightness: ${PCT}%"
         URGENCY="low"
     fi
  
