@@ -1,0 +1,70 @@
+@import "colors.rasi"
+entry {
+    placeholder: "";
+    text-color: @secondary;
+    padding: 8px 0 8px 8px;
+}
+
+configuration {
+    font: "JetBrainsMono Nerd Font Propo 12";
+    lines: 10;
+    fixed-num-lines: true;
+    padding: 10px;
+}
+
+inputbar {
+    children: [entry];
+}
+
+* {
+    background-color: @surface;
+}
+
+mainbox {
+    border: 2px;
+    border-color: @surface;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+window {
+    border-radius: 11px;
+    border: 1px solid;
+    border-color: @surface;
+    background: @surface;
+    padding: 0px;
+    width: 30%;
+}
+
+
+listview {
+    lines: 10;
+    dynamic:                    true;
+    fixed-height:               false;
+}
+
+element {
+    padding: 10px 10px;
+    height: 50px;
+    border-radius: 5px;
+    children: [ element-text, element-icon ];
+}
+
+element-text {
+    text-color: @secondary;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @secondary-container;
+}
+
+element-icon {
+    background-color: transparent;
+}
+
+#scrollbar {
+    handle-color: @tertiary;
+    handle-width: 4px ;
+    padding: 0;
+}
