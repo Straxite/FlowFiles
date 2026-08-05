@@ -30,7 +30,7 @@ notify_brightness() {
  
     if [ "$PCT" -eq 20 ]; then
         ICON="$ICON_DIR/brightness-20.png"
-        TITLE="Brightness: 0%"
+        TITLE="Brightness: ${PCT}%"
         URGENCY="low"
     elif [ "$PCT" -le 40 ]; then
         ICON="$ICON_DIR/brightness-40.png"
