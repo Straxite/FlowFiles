@@ -2,7 +2,7 @@
 # volume-notify.sh
 # Runs 24/7 and sends a desktop notification whenever volume changes.
  
-POLL_INTERVAL=0.1 # seconds between checks (100ms = near-instant response)
+POLL_INTERVAL=0 # seconds between checks (100ms = near-instant response)
 PREV_RAW=""
 NOTIF_ID=0        # holds the live notification ID so each update replaces it
 ICON_DIR="$HOME/.local/share/icons/volume" # SVG icons live here
