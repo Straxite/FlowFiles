@@ -35,6 +35,7 @@ PACMAN_PACKAGES=(
     waybar
     fastfetch
     ttf-jetbrains-mono-nerd
+    perl-file-mimeinfo
     otf-font-awesome
     zed
     nemo-fileroller
