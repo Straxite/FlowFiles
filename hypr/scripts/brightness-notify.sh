@@ -28,7 +28,7 @@ notify_brightness() {
     local PCT="$1"
     local ICON TITLE MSG URGENCY
  
-    if [ "$PCT" -eq 20 ]; then
+    if [ "$PCT" -le 20 ]; then
         ICON="$ICON_DIR/brightness-20.png"
         TITLE="Brightness: ${PCT}%"
         URGENCY="low"
