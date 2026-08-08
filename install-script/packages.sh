@@ -27,6 +27,7 @@ PACMAN_PACKAGES=(
     rofimoji
     flatpak
     yazi
+    satty
     pavucontrol
     htop
     nwg-look
