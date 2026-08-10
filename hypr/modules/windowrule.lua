@@ -83,6 +83,13 @@ hl.layer_rule({
 })
 
 hl.window_rule({
+  name      = "float4",
+  match     = { class = "com.gabm.satty" },
+  float     = true,
+  size      = {1200, 800},
+})
+
+hl.window_rule({
   name      = "float3",
   match     = { class = "impala-nm" },
   float     = true,
