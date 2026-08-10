@@ -10,6 +10,10 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
+# ── Pacman.conf ───────────────────────────────────────────────────────────────
+sudo rm -rf /etc/pacman.conf
+sudo cp -r ~/FlowFiles/pacman.conf /etc/
+
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
     nvim
