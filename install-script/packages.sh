@@ -39,7 +39,7 @@ PACMAN_PACKAGES=(
     nwg-look
     gpu-screen-recorder-ui
     zsh
-    waybar
+    waybar-cava
     fastfetch
     ttf-jetbrains-mono-nerd
     perl-file-mimeinfo
