@@ -12,6 +12,7 @@ RESET='\033[0m'
 
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
+    nvim
     awww
     hyprlock
     xdg-desktop-portal-gnome
