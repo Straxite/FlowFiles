@@ -25,6 +25,7 @@ PACMAN_PACKAGES=(
     hyprshot
     cliphist
     rofimoji
+    eza
     flatpak
     yazi
     satty
