@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-options="Notch\nVelvetline\nClassy\nDynamic-Notch\nLeftSider\nDynamic-Island\nVelvetlineV2\nStock"
+options="Notch\nVelvetline\nClassy\nLeftSider\nDynamic-Island\nVelvetlineV2\nStock"
 
 # Show rofi menu
 chosen=$(printf "$options" | rofi -dmenu \
@@ -18,9 +18,6 @@ case "$chosen" in
         ;;
     Classy)
         ~/.config/waybar/layout-scripts/classy.sh
-        ;;
-    Dynamic-Notch)
-        ~/.config/waybar/layout-scripts/dy-notch.sh
         ;;
     LeftSider)
         ~/.config/waybar/layout-scripts/leftsider.sh
