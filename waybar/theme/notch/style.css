@@ -1,0 +1,96 @@
+@import "colors.css";
+
+* {
+    all: unset;
+    font-family: "Neue Machina, JetBrains Mono Nerd Font Propo", monospace;
+}
+
+window#waybar {
+    background-color: @surface_container;
+    border-radius: 0px 0px 15px 15px;
+}
+
+#workspaces {
+    min-width: 100px;
+    font-size: 0.4rem;
+    padding: 2px 4px;
+    margin: 11px 0px;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    background-color: @on_secondary;
+    color: transparent;
+    min-width: 4px;
+    border-radius: 99px;
+    padding: 0px 10px;
+    margin: 0 2px;
+    transition: 0.25s ease;
+}
+
+#workspaces button.active {
+    background: @on_primary_container;
+    color: transparent;
+    min-width: 25px;
+    border-radius: 99px;
+    padding: 0px 5px;
+    margin: 0 2px;
+}
+
+#cava {
+    background-color: alpha(@primary, 0);
+    color: #e8eaed;
+    font-size: 0.6rem;
+    letter-spacing: 1.3px;
+    padding: 5px 16px 0px 16px;
+    margin: 5px 10px 5px 10px;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+#network,
+#pulseaudio,
+#battery,
+#custom-launcher,
+#custom-notification {
+    background-color: alpha(@primary, 0.5);
+    color: @surface_container;
+    padding: 2px 8px 2px 8px;
+    border-radius: 9px;
+    margin: 5px 5px 5px 5px;
+    font-weight: 600;
+}
+
+#custom-launcher {
+    background-color: alpha(@primary, 0.5);
+    padding: 4px 8px 4px 8px;
+    border-radius: 9px;
+    margin: 5px 5px 5px 5px;
+}
+
+#network {
+    color: @surface_container;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#clock,
+#clock#right {
+    font-family: "Neue Machina";
+    border-radius: 99px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    margin-right: 16px;
+    font-weight: 900;
+}
+
+tooltip {
+    border-radius: 15px;
+    background: @surface_container;
+    border: 2px solid alpha(@primary, 0.5);
+}
