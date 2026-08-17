@@ -30,11 +30,16 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'></span>󰤥",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'></span>󰤭",
-    "format-linked": "",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'></span>",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
     "on-click": "kitty --class impala-nm -e impala-nm",
   },
   "pulseaudio": {
