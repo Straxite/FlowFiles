@@ -145,5 +145,13 @@ hyprpm enable scrolloverview
 # ── Oh My ZSH ─────────────────────────────────────────────────────────────────
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# ── Paru helper ───────────────────────────────────────────────────────────────
+cd
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+# ── VSCODIUM ──────────────────────────────────────────────────────────────────
+paru -S vscodium-bin
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo -e "\n${BOLD}${GREEN}==> All done!${RESET}"
