@@ -20,4 +20,4 @@ echo -e "${GREEN} reloading grub"
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "splash" > /etc/kernel/cmdline
+sudo echo "splash" | sudo tee /etc/kernel/cmdline
