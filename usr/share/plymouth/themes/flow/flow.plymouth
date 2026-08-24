@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=flow
+Description=flow
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/flow
+ScriptFile=/usr/share/plymouth/themes/flow/flow.script
