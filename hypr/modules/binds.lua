@@ -8,7 +8,7 @@ local menu        = "rofi -show drun"
 ---------------------
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
-local alt = "ALT" 
+local alt = "ALT"
 local ctrl = "CTRL"
 local shift = "SHIFT"
 
@@ -23,13 +23,13 @@ hl.bind(mainMod .. " + V", function()
     hl.dispatch(hl.dsp.window.resize({ exact = true, x = 1200, y = 800 }))
 end)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(alt .. " + SPACE", hl.dsp.exec_cmd("~/.config/rofi/launchers/launcher.sh"))
+hl.bind(alt .. " + SPACE", hl.dsp.exec_cmd("~/.config/rofi/launchers/launcher.sh || pkill rofi"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("wlogout -b 6 -m 400 -r 20 -c 20 --buttons-per-row 5"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/rofi/layouts/layout.sh"))
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m region && satty --filename -"))
-hl.bind(alt .. " + TAB", hl.dsp.exec_cmd("snappy-switcher toggle"))
-hl.bind(alt .. " + TAB", hl.dsp.exec_cmd("snappy-switcher next"))
+-- hl.bind(alt .. " + TAB", hl.dsp.exec_cmd("snappy-switcher toggle"))
+-- hl.bind(alt .. " + TAB", hl.dsp.exec_cmd("snappy-switcher next"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/hypr/scripts/lutgen.sh"))
@@ -38,9 +38,10 @@ hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("kitty --class yazi -e yazi"))
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd("kitty --class htop -e htop"))
 hl.bind(alt .. " + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard/launcher.sh"))
 hl.bind("CTRL + SUPER + SPACE", hl.dsp.exec_cmd("rofimoji --action copy"))
-hl.bind("ALT + TAB", function()
+hl.bind(alt .. " + TAB", function()
     hl.plugin.scrolloverview.overview("toggle all")
 end)
+hl.bind(mainMod .. " +L", hl.dsp.exec_cmd("/home/inde/.local/share/quickshell-lockscreen/lock.sh"))
 
 -- Move windows
 hl.bind("ALT + UP", hl.dsp.window.move( { direction = "up" } ))
@@ -65,10 +66,6 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
--- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
-
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
@@ -86,8 +83,8 @@ hl.bind(ctrl .. " + DOWN", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK
 -- hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
 hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("brightnessctl set 5%+"),                  { locked = true, repeating = true })
 hl.bind(shift .. " + DOWN",hl.dsp.exec_cmd("brightnessctl set 5%-"),                  { locked = true, repeating = true })
--- hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("swayosd-client --brightness +10"),                  { locked = true, repeating = true })
--- hl.bind(shift .. " + DOWN",  hl.dsp.exec_cmd("swayosd-client --brightness -10"),                  { locked = true, repeating = true })
+-- hl.bind(shift .. " + UP",  hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness.sh --inc"),                  { locked = true, repeating = true })
+-- hl.bind(shift .. " + DOWN",  hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness.sh --dec"),                  { locked = true, repeating = true })
 
 
 -- Requires playerctl
