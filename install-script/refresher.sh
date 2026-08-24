@@ -25,3 +25,5 @@ sudo echo "splash" | sudo tee /etc/kernel/cmdline
 echo -e "${GREEN} reloading grub once again cuz the script writer, which is me is a dummass"
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo plymouth-set-default-theme -R flow
