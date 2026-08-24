@@ -41,7 +41,7 @@ hl.bind("CTRL + SUPER + SPACE", hl.dsp.exec_cmd("rofimoji --action copy"))
 hl.bind(alt .. " + TAB", function()
     hl.plugin.scrolloverview.overview("toggle all")
 end)
-hl.bind(mainMod .. " +L", hl.dsp.exec_cmd("/home/inde/.local/share/quickshell-lockscreen/lock.sh"))
+hl.bind(mainMod .. " +L", hl.dsp.exec_cmd("~/.local/share/quickshell-lockscreen/lock.sh"))
 
 -- Move windows
 hl.bind("ALT + UP", hl.dsp.window.move( { direction = "up" } ))
