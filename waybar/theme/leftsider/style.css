@@ -31,7 +31,7 @@ button:hover {
 #workspaces button {
     color: @on_secondary;
     background-color: @on_secondary;
-    border-radius: 3px;
+    border-radius: 9px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: 3px;
@@ -55,7 +55,7 @@ button:hover {
         alpha(@primary, 1),
         /* solid top */ alpha(@secondary, 0.6) /* mid fade */
     );
-    border-radius: 3px;
+    border-radius: 9px;
     padding-top: 40px;
     padding-bottom: 40px;
     margin-top: 3px;
