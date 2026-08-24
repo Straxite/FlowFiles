@@ -142,6 +142,7 @@ run_full_install() {
     echo -e "    ${CYAN}1.${RESET} Install all packages"
     echo -e "    ${CYAN}2.${RESET} Deploy dotfiles"
     echo -e "    ${CYAN}3.${RESET} Make scripts executable"
+    echo -e "    ${CYAN}4.${RESET} Refresh configs"
     echo ""
     echo -e -n "  ${BOLD}Continue? [y/N]:${RESET} "
     read -r confirm
@@ -152,18 +153,23 @@ run_full_install() {
 
     # Step 1
     print_banner
-    print_header "Step 1 of 3 — Installing Packages"
+    print_header "Step 1 of 4 — Installing Packages"
     bash "$SCRIPT_DIR/packages.sh"
 
     # Step 2
     print_banner
-    print_header "Step 2 of 3 — Deploying DotFiles"
+    print_header "Step 2 of 4 — Deploying DotFiles"
     bash "$SCRIPT_DIR/setup.sh"
 
     # Step 3
     print_banner
-    print_header "Step 3 of 3 — Making Scripts Executable"
+    print_header "Step 3 of 4 — Making Scripts Executable"
     bash "$SCRIPT_DIR/executable-maker.sh"
+
+    # Step 3
+    print_banner
+    print_header "Step 4 of 4 — Refreshing Configs"
+    bash "$SCRIPT_DIR/refresher.sh"
 
     # Done
     print_banner
@@ -187,11 +193,12 @@ show_menu() {
     echo -e "    ${CYAN}[1]${RESET}  Install packages"
     echo -e "    ${CYAN}[2]${RESET}  Deploy dotfiles"
     echo -e "    ${CYAN}[3]${RESET}  Make scripts executable"
-    echo -e "    ${CYAN}[4]${RESET}  Run full installation"
-    echo -e "    ${CYAN}[5]${RESET}  Exit"
+    echo -e "    ${CYAN}[4]${RESET}  Refresh Configs"
+    echo -e "    ${CYAN}[5]${RESET}  Run full installation"
+    echo -e "    ${CYAN}[6]${RESET}  Exit"
     echo ""
     echo -e "  ${BLUE}─────────────────────────────────────────${RESET}"
-    echo -e -n "\n  ${BOLD}Choose an option [1-5]:${RESET} "
+    echo -e -n "\n  ${BOLD}Choose an option [1-6]:${RESET} "
 }
 
 # ── Entry point ───────────────────────────────────────────────────────────────
@@ -205,14 +212,15 @@ while true; do
         1) run_step "Installing Packages"       "$SCRIPT_DIR/packages.sh" ;;
         2) run_step "Deploying Dotfiles"        "$SCRIPT_DIR/setup.sh" ;;
         3) run_step "Making Scripts Executable" "$SCRIPT_DIR/executable-maker.sh" ;;
-        4) run_full_install ;;
-        5)
+        4) run_step "Refreshing Configs"        "$SCRIPT_DIR/refresher.sh" ;;
+        5) run_full_install ;;
+        6)
             print_banner
             echo -e "  ${DIM}Goodbye!${RESET}\n"
             exit 0
             ;;
         *)
-            echo -e "\n  ${RED}Invalid option. Please choose 1-5.${RESET}"
+            echo -e "\n  ${RED}Invalid option. Please choose 1-6.${RESET}"
             sleep 1
             ;;
     esac
