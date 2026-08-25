@@ -1,7 +1,7 @@
 {
   "position": "top",
   "layer": "top",
-  "modules-left": ["custom/launcher","cava","temperature"],
+  "modules-left": ["custom/launcher","custom/spotify","temperature"],
   "modules-center": ["clock","hyprland/workspaces","custom/notification"],
   "modules-right": ["pulseaudio","network","battery"],
   "clock": {
@@ -101,5 +101,26 @@
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
     "format": " {temperatureC}°"
-}
+  },
+  "mpris": {
+    "player": "spotify",
+    "format": "{status_icon} {title}",
+    "format-paused": "{status_icon} {title}",
+    "player-icons": {
+        "spotify": "󰓇 "
+    },
+    "status-icons": {
+        "playing": " ",
+        "paused": " ",
+        "stopped": " "
+    },
+    "max-length": 40
+  },
+"custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "return-type": "",
+    "format": "{}",
+    "interval": 1,
+    "on-click": "playerctl -p spotify play-pause"
+  }
 }

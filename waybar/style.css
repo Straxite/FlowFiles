@@ -213,6 +213,23 @@ button:hover {
     padding-right: 16px;
 }
 
+#mpris,
+#custom-spotify {
+    font-family: NeueMachina;
+    color: @tertiary_fixed_dim;
+    background: @surface_container_lowest;
+    border-radius: 99px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: 600;
+}
+
 tooltip {
     border-radius: 15px;
     background: @surface_container;
