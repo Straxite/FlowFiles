@@ -2,7 +2,7 @@
 
 * {
     all: unset;
-    font-family: "JetBrains Mono Nerd Font Propo", monospace;
+    font-family: "SF Pro Display, JetBrains Mono Nerd Font Propo", monospace;
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -21,8 +21,8 @@ button {
 }
 
 button:hover {
-    border-left: 1px solid @scrim;
-    border-right: 1px solid @scrim;
+    border-left: 1px solid @surface_container;
+    border-right: 1px solid @surface_container;
 }
 
 #workspaces button {
@@ -45,7 +45,7 @@ button:hover {
 
 #workspaces button.active {
     color: @scrim;
-    background: @on_primary_container;
+    background: @primary;
     border-radius: 99px;
     padding-left: 25px;
     padding-right: 25px;
@@ -80,11 +80,11 @@ button:hover {
 }
 
 #pulseaudio {
-    color: @blue;
+    color: @tertiary_fixed;
 }
 
 #network {
-    color: @secondary;
+    color: @primary;
 }
 
 #idle_inhibitor {
@@ -97,16 +97,26 @@ button:hover {
 }
 
 #battery {
-    color: @mauve;
+    background: @surface_container_lowest;
+    color: @secondary;
+    border-radius: 99px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-right: 16px;
+    font-weight: 600; 
 }
 
-#network,
-#pulseaudio,
-#battery,
-#custom-launcher,
-#custom-notification,
 #temperature {
-    background: @scrim;
+    color: @surface_tint;
+}
+
+#custom-launcher {
+    color: @tertiary_fixed_dim;
+    background: @surface_container_lowest;
     border-radius: 99px;
     padding-left: 16px;
     padding-right: 16px;
@@ -115,12 +125,26 @@ button:hover {
     margin-top: 8px;
     margin-bottom: 0px;
     margin-left: 16px;
-    margin-right: 16px;
+    margin-right: 8px;
     font-weight: 600;
 }
 
-#clock {
-    background: @scrim;
+#network,
+#pulseaudio {
+    background: @surface_container_lowest;
+    border-radius: 99px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+#custom-notification {
+    background: @surface_container_lowest;
     border-radius: 99px;
     padding-left: 16px;
     padding-right: 16px;
@@ -129,12 +153,41 @@ button:hover {
     margin-top: 8px;
     margin-bottom: 0px;
     margin-left: 4px;
-    margin-right: 16px;
+    margin-right: 4px;
+    font-weight: 600;
+}
+
+#temperature {
+    background: @surface_container_lowest;
+    border-radius: 99px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+#clock {
+    background: @surface_container_lowest;
+    color:  @primary;
+    border-radius: 99px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
     font-weight: 800;
 }
 
 #workspaces {
-    background: @scrim;
+    background: @surface_container_lowest;
     border-radius: 99px;
     padding-left: 2px;
     padding-right: 2px;
@@ -142,15 +195,15 @@ button:hover {
     padding-bottom: 4px;
     margin-top: 8px;
     margin-bottom: 0px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 #cava {
     color: @on_primary_container;
     font-size: 0.6rem;
     letter-spacing: 2px;
-    background: @scrim;
+    background: @surface_container_lowest;
     border-radius: 99px;
     padding-top: 4px;
     padding-bottom: 0px;
