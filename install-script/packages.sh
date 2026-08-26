@@ -26,6 +26,8 @@ PACMAN_PACKAGES=(
     rofi
     curl
     perl
+    brightnessctl
+    swaync
     wl-clipboard
     cargo
     hyprshot
