@@ -74,7 +74,20 @@ window#waybar {
     padding-right: 10px;
 }
 
-#clock,
+#clock {
+    font-family: "Neue Machina";
+    border-radius: 99px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: 900;
+}
+
 #clock#right {
     font-family: "Neue Machina";
     border-radius: 99px;
