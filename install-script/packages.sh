@@ -13,6 +13,7 @@ RESET='\033[0m'
 # ── Pacman.conf ───────────────────────────────────────────────────────────────
 sudo rm -rf /etc/pacman.conf
 sudo cp -r ~/FlowFiles/pacman.conf /etc/
+sudo pacman -Syy
 
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
@@ -55,7 +56,6 @@ AUR_PACKAGES=(
     cmatrix-git
     nitch
     wlogout
-    visual-studio-code-bin
     bluetuith
     adw-gtk-theme-git
 )
@@ -124,8 +124,6 @@ for pkg in "${AUR_PACKAGES[@]}"; do
     install_aur "$pkg"
 done
 
-# ── Power Level 10K ───────────────────────────────────────────────────────────
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 # ── Momoisay ──────────────────────────────────────────────────────────────────
 git clone https://github.com/Mon4sm/Momoisay.git
@@ -138,12 +136,9 @@ cargo install impala-nm
 # ── Hyprland-Plugins ──────────────────────────────────────────────────────────
 
 hyprpm update
-hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/yayuuu/hyprland-scroll-overview.git
 hyprpm update
 hyprpm enable scrolloverview
-# ── Oh My ZSH ─────────────────────────────────────────────────────────────────
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # ── Paru helper ───────────────────────────────────────────────────────────────
 cd
@@ -153,5 +148,12 @@ makepkg -si
 
 # ── VSCODIUM ──────────────────────────────────────────────────────────────────
 paru -S vscodium-bin
+
+# ── Oh My ZSH ─────────────────────────────────────────────────────────────────
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# ── Power Level 10K ───────────────────────────────────────────────────────────
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo -e "\n${BOLD}${GREEN}==> All done!${RESET}"
