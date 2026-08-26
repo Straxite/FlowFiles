@@ -31,6 +31,7 @@ PACMAN_PACKAGES=(
     hyprshot
     cliphist
     rofimoji
+    quickshell
     eza
     flatpak
     yazi
