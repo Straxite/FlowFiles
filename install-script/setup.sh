@@ -112,6 +112,7 @@ CONFIG_FOLDERS=(
     waybar
     wlogout
     fastfetch
+    quickshell
 )
 
 if confirm_copy ".config"; then
