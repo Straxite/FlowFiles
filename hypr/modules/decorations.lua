@@ -22,12 +22,12 @@ hl.config({
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
 
-        layout = "dwindle",
+        layout = "scrolling",
     },
 
     decoration = {
-        rounding       = 15,
-        rounding_power = 2,
+        rounding       = 16,
+        rounding_power = 5,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
@@ -53,6 +53,7 @@ hl.config({
     },
 
     scrolling = {
-        column_width    = 0.9
+        column_width    = 0.9,
+        focus_fit_method = 0,
     }
 })
