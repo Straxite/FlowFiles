@@ -28,6 +28,7 @@ PACMAN_PACKAGES=(
     perl
     brightnessctl
     swaync
+    swayosd
     wl-clipboard
     cargo
     hyprshot
@@ -43,6 +44,7 @@ PACMAN_PACKAGES=(
     nwg-look
     gpu-screen-recorder-ui
     zsh
+    libcava
     waybar-cava
     fastfetch
     ttf-jetbrains-mono-nerd
@@ -154,6 +156,7 @@ paru -S vscodium-bin
 paru -S fetch-git
 
 # ── Oh My ZSH ─────────────────────────────────────────────────────────────────
+cd
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # ── Power Level 10K ───────────────────────────────────────────────────────────
