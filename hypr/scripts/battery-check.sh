@@ -1,6 +1,6 @@
 #!/bin/bash
  
-THRESHOLD=20
+THRESHOLD=35
 BATTERY_PATH="/sys/class/power_supply/BAT0/capacity"
 ICON_DIR="$HOME/.local/share/icons/battery"
  
@@ -15,5 +15,5 @@ while true; do
             --icon="$ICON_DIR/battery-low.svg"
     fi
  
-    sleep 60  # Check every 60 seconds
+    sleep 120  # Check every 60 seconds
 done

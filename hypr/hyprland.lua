@@ -4,17 +4,12 @@ require("modules.programs")
 require("modules.autostart")
 require("modules.env")
 require("modules.perms")
-require("modules.decorations")
+require("modules.looknfeel")
 require("modules.animations")
 require("modules.misc")
 require("modules.windowrule")
 require("colors")
 require("modules.plugins")
-
-
--- ecosystem --
-hl.config({ 
-  ecosystem = {
-    enforce_permissions = true
-  }
-})
+require("modules.layouts")
+require("modules.input")
+require("modules.ecosystem")
