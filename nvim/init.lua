@@ -111,7 +111,7 @@ require('lualine').setup {
         padding = { left = 1, right = 1 }, -- Prevents padding from breaking the outside of the bubble container
       } },
     lualine_y = {},
-    lualine_z = {{ 'location', icon = { ' ', color = {fg = colors1.surface_container, bg = colors1.primary} } , padding = { left = 0, right = 1 }}}
+    lualine_z = {{ function() local line = vim.fn.line('.') local col = vim.fn.virtcol('.') return string.format('%d/%d', line, col) end, icon = { ' ', color = {fg = colors1.surface_container, bg = colors1.primary} } , padding = { left = 0, right = 1 }}}
   },
   inactive_sections = {
     lualine_a = {},
