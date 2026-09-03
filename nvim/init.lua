@@ -1,4 +1,4 @@
--- Need this fr fr cuz u wanna be lazy?? :)
+-- Need this fr fr cuz u wanna be lazy?? ;)
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
