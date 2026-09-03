@@ -1,4 +1,4 @@
--- U are colorful cuz i am!!
+-- R u colorful?? cuz i am guys!
 require("colors")
 -- These are the modules
 require("modules/binds")
