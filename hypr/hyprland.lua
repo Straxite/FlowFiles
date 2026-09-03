@@ -1,3 +1,6 @@
+-- U are colorful cuz i am!!
+require("colors")
+-- These are the modules
 require("modules/binds")
 require("modules/monitors")
 require("modules/programs")
@@ -8,7 +11,6 @@ require("modules/looknfeel")
 require("modules/animations")
 require("modules/misc")
 require("modules/windowrule")
-require("colors")
 require("modules/plugins")
 require("modules/layouts")
 require("modules/input")
