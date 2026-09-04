@@ -8,7 +8,16 @@ local colors1 = require("colors")
 local cheeze = {
   normal = {
     a = { fg = colors1.surface, bg = colors1.primary },
-    b = { fg = colors1.tertiary, bg = colors1.surface_container_highest },
+    b = { fg = colors1.tertiary, bg = colors1.surface_container_high },
+    c = { fg = colors1.white },
+    x = { fg = colors1.tertiary, bg = colors1.tertiary},
+    y = { fg = colors1.primary, bg = colors1.surface_container_highest },
+    z = { fg = colors1.primary, bg = colors1.surface_container_highest }
+  },
+
+  command = {
+    a = { fg = colors1.surface, bg = colors1.outline },
+    b = { fg = colors1.tertiary, bg = colors1.surface_container_high },
     c = { fg = colors1.white },
     x = { fg = colors1.tertiary, bg = colors1.tertiary},
     y = { fg = colors1.primary, bg = colors1.surface_container_highest },
@@ -17,21 +26,21 @@ local cheeze = {
 
   insert = {
     a = { fg = colors1.surface, bg = colors1.tertiary },
-    b = { fg = colors1.tertiary, bg = colors1.surface_container_highest },
+    b = { fg = colors1.tertiary, bg = colors1.surface_container_high },
     c = { fg = colors1.white },
     y = { fg = colors1.primary, bg = colors1.surface_container_highest },
     z = { fg = colors1.primary, bg = colors1.surface_container_highest }
   },
   visual = {
     a = { fg = colors1.surface, bg = colors1.secondary },
-    b = { fg = colors1.tertiary, bg = colors1.surface_container_highest },
+    b = { fg = colors1.tertiary, bg = colors1.surface_container_high },
     c = { fg = colors1.white },
     y = { fg = colors1.primary, bg = colors1.surface_container_highest },
     z = { fg = colors1.primary, bg = colors1.surface_container_highest }
   },
   replace = {
     a = { fg = colors1.surface, bg = colors1.on_primary },
-    b = { fg = colors1.tertiary, bg = colors1.surface_container_highest },
+    b = { fg = colors1.tertiary, bg = colors1.surface_container_high },
     c = { fg = colors1.white },
     y = { fg = colors1.primary, bg = colors1.surface_container_highest },
     z = { fg = colors1.primary, bg = colors1.surface_container_highest }
@@ -80,7 +89,7 @@ require('lualine').setup({
   },
   sections = {
     lualine_a = {{ 'mode', icon = '' }},
-    lualine_b = {{function() return ' ' end, color = { bg = colors1.surface_container }, padding = { left= 0, right = 0 }, separator = { right = '' }}, {'filetype', icon_only = true, separator = "", padding = { left = 1, right = 0 }},{ 'filename', padding = { left = 0, right = 1 } }, 'branch', 'diff', 'diagnostics'},
+    lualine_b = {{function() return ' ' end, color = { bg = colors1.on_secondary }, padding = { left= 0, right = 0 }, separator = { right = '' }}, {'filetype', icon_only = true, separator = "", padding = { left = 1, right = 0 }},{ 'filename', padding = { left = 0, right = 1 } }, 'branch', 'diff', 'diagnostics'},
     lualine_c = {},
     lualine_x = { { function() return "󰉋 " end, separator = { left = '', right = '' }, color = { fg = colors1.surface_container_highest, bg = colors1.tertiary }, padding = { left = 0, right = 0 } }, {
         get_username,
