@@ -16,10 +16,10 @@ sudo cp -r ~/FlowFiles/pacman.conf /etc/
 sudo pacman -Syy
 
 # ── Paru helper ───────────────────────────────────────────────────────────────
-cd
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+cd
 
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
