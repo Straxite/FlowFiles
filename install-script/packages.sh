@@ -15,6 +15,12 @@ sudo rm -rf /etc/pacman.conf
 sudo cp -r ~/FlowFiles/pacman.conf /etc/
 sudo pacman -Syy
 
+# ── Paru helper ───────────────────────────────────────────────────────────────
+cd
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
 # ── Package lists ─────────────────────────────────────────────────────────────
 PACMAN_PACKAGES=(
     nvim
@@ -55,7 +61,6 @@ PACMAN_PACKAGES=(
 )
 
 AUR_PACKAGES=(
-    helium-browser-bin
     lutgen-studio-bin
     peaclock
     cmatrix-git
@@ -145,15 +150,10 @@ hyprpm add https://github.com/yayuuu/hyprland-scroll-overview.git
 hyprpm update
 hyprpm enable scrolloverview
 
-# ── Paru helper ───────────────────────────────────────────────────────────────
-cd
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
-# ── VSCODIUM ──────────────────────────────────────────────────────────────────
+# ── Paru-Packs ────────────────────────────────────────────────────────────────
 paru -S vscodium-bin
 paru -S fetch-git
+paru -S brave-bin
 
 # ── Oh My ZSH ─────────────────────────────────────────────────────────────────
 cd
