@@ -7,7 +7,7 @@ RowLayout {
     spacing: 8
 
     Repeater {
-        model: 9
+        model: 5
 
         Rectangle {
             id: wsButton
