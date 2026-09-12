@@ -25,7 +25,7 @@ ShellRoot {
     exclusiveZone: 35
 
     // only steal keyboard focus while an interactive module is open
-    WlrLayershell.keyboardFocus: (pill.showLauncher || pill.showWallpaper)
+    WlrLayershell.keyboardFocus: (pill.showLauncher || pill.showWallpaper || pill.showControl)
       ? WlrKeyboardFocus.Exclusive
       : WlrKeyboardFocus.None
 
@@ -48,6 +48,7 @@ ShellRoot {
         if (toggleDebounce.running) return
         toggleDebounce.restart()
         pill.showWallpaper = false
+        pill.showControl = false
         pill.showLauncher = !pill.showLauncher
       }
       function show(): void { pill.showLauncher = true }
@@ -60,10 +61,25 @@ ShellRoot {
         if (toggleDebounce.running) return
         toggleDebounce.restart()
         pill.showLauncher = false
+        pill.showControl = false
         pill.showWallpaper = !pill.showWallpaper
       }
       function show(): void { pill.showWallpaper = true }
       function hide(): void { pill.showWallpaper = false }
+    }
+
+    // bind in hyprland.lua: hl.dsp.exec_cmd("qs ipc call control toggle")
+    IpcHandler {
+      target: "control"
+      function toggle(): void {
+        if (toggleDebounce.running) return
+        toggleDebounce.restart()
+        pill.showLauncher = false
+        pill.showWallpaper = false
+        pill.showControl = !pill.showControl
+      }
+      function show(): void { pill.showControl = true }
+      function hide(): void { pill.showControl = false }
     }
 
     Timer {
@@ -79,22 +95,42 @@ ShellRoot {
       Rectangle {
         id: pill
         color: "black"
-        radius: (showLauncher || showWallpaper) ? 30 : 99
 
         implicitWidth: showLauncher
           ? (launcherLoader.item ? launcherLoader.item.implicitWidth + 18 : 420)
           : showWallpaper
             ? (wallpaperLoader.item ? wallpaperLoader.item.implicitWidth + 18 : 760)
-            : content.implicitWidth + 70
+            : showInfo
+              ? (infoLoader.item ? infoLoader.item.implicitWidth + 18 : 460)
+              : showControl
+                ? (controlLoader.item ? controlLoader.item.implicitWidth + 18 : 480)
+                : content.implicitWidth + 70
         implicitHeight: showLauncher
           ? (launcherLoader.item ? launcherLoader.item.implicitHeight + 22 : 60)
           : showWallpaper
             ? (wallpaperLoader.item ? wallpaperLoader.item.implicitHeight + 22 : 145)
-            : content.implicitHeight + 14
+            : showInfo
+              ? (infoLoader.item ? infoLoader.item.implicitHeight + 22 : 60)
+              : showControl
+                ? (controlLoader.item ? controlLoader.item.implicitHeight + 22 : 420)
+                : content.implicitHeight + 14
+
+        radius: (showLauncher || showWallpaper || showControl) ? 30 : 99
 
         property bool showLauncher: false
         property bool showWallpaper: false
+        property bool showControl: false
         property bool showWorkspaces: revealTimer.running
+
+        // reveals InfoPanel on hover — disabled while any other
+        // interactive module is open so hovering to reach them
+        // doesn't fight with this
+        property bool showInfo: infoHover.hovered && !showLauncher && !showWallpaper && !showControl
+
+        HoverHandler {
+          id: infoHover
+          enabled: !pill.showLauncher && !pill.showWallpaper && !pill.showControl
+        }
 
         // single source of animation for the pill — nothing inside
         // LauncherContent animates its own size, so this is the only
@@ -113,7 +149,7 @@ ShellRoot {
         Connections {
           target: Hyprland
           function onFocusedWorkspaceChanged() {
-            if (!pill.showLauncher && !pill.showWallpaper) revealTimer.restart()
+            if (!pill.showLauncher && !pill.showWallpaper && !pill.showControl) revealTimer.restart()
           }
         }
 
@@ -128,7 +164,7 @@ ShellRoot {
         Item {
           id: content
           anchors.centerIn: parent
-          visible: !pill.showLauncher && !pill.showWallpaper
+          visible: !pill.showLauncher && !pill.showWallpaper && !pill.showInfo && !pill.showControl
           implicitWidth: pill.showWorkspaces ? wsLoader.implicitWidth : label.implicitWidth
           implicitHeight: pill.showWorkspaces ? wsLoader.implicitHeight : label.implicitHeight
 
@@ -193,6 +229,33 @@ ShellRoot {
 
           onLoaded: item.closeRequested.connect(function() {
             pill.showWallpaper = false
+          })
+        }
+
+        // hover-revealed info island — no closeRequested needed, it
+        // just tracks infoHover.hovered directly
+        Loader {
+          id: infoLoader
+          anchors.centerIn: parent
+          active: pill.showInfo
+          visible: pill.showInfo
+          source: "InfoPanel.qml"
+        }
+
+        // control center — same pill, opened through:
+        // qs ipc call control toggle
+        Loader {
+          id: controlLoader
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          anchors.topMargin: 10
+          anchors.bottomMargin: 6
+          active: pill.showControl
+          visible: pill.showControl
+          source: "ControlCenter.qml"
+
+          onLoaded: item.closeRequested.connect(function() {
+            pill.showControl = false
           })
         }
       }

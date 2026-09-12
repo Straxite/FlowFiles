@@ -20,6 +20,11 @@ Item {
 
   property var wallpapers: []
   property int currentIndex: 0
+  property string savedWallpaperPath: ""
+
+  // Stores the exact wallpaper path that was last applied.
+  // This survives Quickshell restarts.
+  readonly property string wallpaperStateFile: "$HOME/.config/quickshell/current-wallpaper"
 
   signal closeRequested()
 
@@ -39,7 +44,19 @@ Item {
   }
 
   function loadWallpapers() {
+    savedWallpaperReader.running = true
     wallpaperReader.running = true
+  }
+
+  function restoreSavedWallpaper() {
+    if (root.savedWallpaperPath.length === 0 || root.wallpapers.length === 0)
+      return
+
+    var savedIndex = root.wallpapers.indexOf(root.savedWallpaperPath)
+    if (savedIndex >= 0) {
+      root.currentIndex = savedIndex
+      wallpapersList.positionViewAtIndex(savedIndex, ListView.Center)
+    }
   }
 
   function applyCurrent() {
@@ -69,6 +86,24 @@ Item {
   }
 
   Process {
+    id: savedWallpaperReader
+
+    command: [
+      "bash", "-lc",
+      "if [ -f \"$HOME/.config/quickshell/current-wallpaper\" ]; then " +
+      "cat \"$HOME/.config/quickshell/current-wallpaper\"; " +
+      "fi"
+    ]
+
+    stdout: StdioCollector {
+      onStreamFinished: {
+        root.savedWallpaperPath = text.trim()
+        root.restoreSavedWallpaper()
+      }
+    }
+  }
+
+  Process {
     id: wallpaperReader
 
     command: [
@@ -88,6 +123,8 @@ Item {
         if (root.currentIndex >= root.wallpapers.length)
           root.currentIndex = Math.max(0, root.wallpapers.length - 1)
 
+        root.restoreSavedWallpaper()
+
         if (root.wallpapers.length > 0)
           wallpapersList.positionViewAtIndex(root.currentIndex, ListView.Center)
       }
@@ -105,6 +142,7 @@ Item {
     command: [
       "bash", "-lc",
       "export PATH=\"$HOME/.local/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:$PATH\"; " +
+      "STATE_FILE=\"$HOME/.config/quickshell/current-wallpaper\"; " +
       "AWWW=\"$(command -v awww)\"; " +
       "DAEMON=\"$(command -v awww-daemon)\"; " +
       "if [ -z \"$AWWW\" ]; then echo 'wallpaper_switcher: awww not found in PATH' >&2; exit 127; fi; " +
@@ -115,7 +153,16 @@ Item {
       "    sleep 0.1; \"$AWWW\" query >/dev/null 2>&1 && break; " +
       "  done; " +
       "fi; " +
-      "\"$AWWW\" img \"$1\" --transition-type fade --transition-fps 60 --transition-duration 0.6 --resize crop",
+      "\"$AWWW\" img \"$1\" --transition-type fade --transition-fps 60 --transition-duration 0.6 --resize crop; " +
+      "AWWW_STATUS=$?; " +
+      "if [ $AWWW_STATUS -eq 0 ]; then " +
+      "  matugen image \"$1\" --source-color-index 0 --type scheme-tonal-spot; " +
+      "  MATUGEN_STATUS=$?; " +
+      "  mkdir -p \"$(dirname \"$STATE_FILE\")\"; " +
+      "  printf '%s\\n' \"$1\" > \"$STATE_FILE\"; " +
+      "  echo \"wallpaper_switcher: matugen exited with code $MATUGEN_STATUS\" >&2; " +
+      "fi; " +
+      "exit $AWWW_STATUS",
       "wallpaper-switcher",
       wallpaperPath
     ]
@@ -123,7 +170,7 @@ Item {
     onRunningChanged: {
       if (!running) {
         if (exitCode === 0) {
-          console.log("wallpaper_switcher: applied", wallpaperPath)
+          console.log("wallpaper_switcher: applied, matugen ran, saved", wallpaperPath)
           root.closeRequested()
         } else {
           console.warn("wallpaper_switcher: awww exited with code", exitCode)
@@ -222,7 +269,7 @@ Item {
             height: root.cardHeight
             radius: root.imageRadius
             clip: true
-            color: "#111111"
+            color: "#000000"
             border.width: wallpaperDelegate.selected ? 2 : 0
             border.color: "#80d4dc"
 
@@ -247,7 +294,7 @@ Item {
               anchors.fill: parent
               radius: root.imageRadius
               color: "transparent"
-              border.width: wallpaperDelegate.selected ? 2 : 0
+              border.width: wallpaperDelegate.selected ? 1 : 0
               border.color: "#80d4dc"
             }
           }
