@@ -11,3 +11,5 @@ BOLD='\033[1m'
 RESET='\033[0m'
 
 # ── Refresh ───────────────────────────────────────────────────────────────────
+
+gsettings set org.gnome.desktop.wm.preferences button-layout ':'
