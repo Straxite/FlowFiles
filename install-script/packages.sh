@@ -46,7 +46,7 @@ PACMAN_PACKAGES=(
     yazi
     satty
     pavucontrol
-    htop
+    btop
     nwg-look
     gpu-screen-recorder-ui
     zsh
